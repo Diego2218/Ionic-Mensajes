@@ -9,5 +9,5 @@
 <ion-content padding>
   <ion-label stacked>Enter user name:</ion-label>
   <ion-input type="text" [(ngModel)]="user"></ion-input>
-  <button ion-button color="dark" round>Start chat</button>
+  <button ion-button color="dark" round (click)="getUser()">Start chat</button>
 </ion-content>

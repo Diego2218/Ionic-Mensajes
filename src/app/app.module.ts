@@ -1,7 +1,7 @@
-import { MensajesPage } from './../pages/mensajes/mensajes';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular/umd';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
@@ -25,7 +25,6 @@ const config = {
   declarations: [
     MyApp,
     HomePage,
-    MensajesPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +36,6 @@ const config = {
   entryComponents: [
     MyApp,
     HomePage,
-    MensajesPage
   ],
   providers: [
     StatusBar,
