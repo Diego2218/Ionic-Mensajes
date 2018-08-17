@@ -8,6 +8,7 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 export class HomePage {
 
   user: '';
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
 

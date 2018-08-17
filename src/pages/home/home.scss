@@ -1,3 +1,21 @@
-page-home {
+.principal {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+}
 
+.cajaTxt{
+    border: 2px solid rgb(155, 153, 153);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: dimgrey;
+    text-align: left;
+}
+
+.button{
+    margin-top: 15px;
 }

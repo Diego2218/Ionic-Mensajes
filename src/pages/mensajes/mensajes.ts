@@ -17,20 +17,38 @@ export class MensajesPage {
 
   username: string;
   msgModel: Array<Message>;
+  mensaje: Message;
 
-  arrMsj = [];
+  texto = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private messaProv: MessengerProvider) {
-    this.username = this.navParams.get('user');
-  }
+    this.username = this.navParams.get('username');
 
-
-  ionViewWillLoad() {
     this.messaProv.getMessages().subscribe(msj => {
       this.msgModel = msj;
+      this.msgModel.sort(function(a,b){
+        return (a.fecha > b.fecha) ? 1:-1;
+      })
+      console.log(this.msgModel);
     }, (error) => {
       console.error(error);
     })
+
+  }
+
+  sendMessage(){
+    this.mensaje = {
+      name: this.username,
+      msj: this.texto,
+      fecha: new Date()
+    }
+    this.messaProv.putMessage(this.mensaje);
+  }
+
+
+
+  ionViewWillLoad() {
+    
   }
 
 }

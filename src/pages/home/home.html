@@ -6,8 +6,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-label stacked>Enter user name:</ion-label>
-  <ion-input type="text" [(ngModel)]="user"></ion-input>
-  <button ion-button color="dark" round (click)="getUser()">Start chat</button>
+<ion-content padding class="principal">
+  <p>Enter user name:</p>
+  <ion-input type="text" [(ngModel)]="user" class="cajaTxt"></ion-input>
+  <button ion-button color="dark" round (click)="getUser()" class="button">Start chat</button>
 </ion-content>

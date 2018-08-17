@@ -7,9 +7,31 @@
 </ion-header>
 
 
-<ion-content padding>
-  <div justify-content: end>
-    <ion-textarea [(ngModel)]="text"> </ion-textarea>
-    <button ion-button round>Send</button>
-  </div>
+<ion-content padding class="page-mensajes">
+      <ion-list no-lines>
+          <ion-item *ngFor="let mensaje of msgModel">
+      
+            <div class="msjOtros"  *ngIf="mensaje.name != username">
+              <h3>{{mensaje.name}}</h3>
+              <p>{{mensaje.msj}}</p>
+            </div>
+      
+            <div class="msjYo" *ngIf="mensaje.name == username">
+              <h3>{{mensaje.name}}</h3>
+              <p>{{mensaje.msj}}</p>
+            </div>
+      
+          </ion-item>
+        </ion-list>
 </ion-content>
+
+<ion-footer class="foot">
+    <ion-toolbar color="white">
+      <ion-input [(ngModel)]="texto" class="inputBox"> </ion-input>
+      <ion-buttons end>
+        <button ion-button icon-start color="primary" (click)="sendMessage()">
+          <ion-icon name="send"></ion-icon> send
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

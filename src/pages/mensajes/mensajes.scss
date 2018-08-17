@@ -1,3 +1,43 @@
-page-mensajes {
+.page-mensajes {
+    background-color: aliceblue;
+}
 
+.item{
+    background-color: aliceblue;
+}
+
+.sendIcon{
+    width: 30px;
+    height: 27px;
+}
+
+.inputBox{
+    border: 2px solid rgb(155, 153, 153);
+    border-radius: 5px;
+}
+
+.foot{
+    padding: 10px;
+    background-color: white;
+}
+
+.msjOtros{
+    padding: 5px;
+    text-align: left;
+    width: 180px;
+    height: auto;
+    border: 2px solid rgb(169, 177, 177);
+    border-radius: 8px;
+    background-color: rgb(241, 243, 245);
+}
+
+.msjYo{
+    padding: 5px;
+    float: right;
+    width: 180px;
+    height: auto;
+    text-align: right;
+    border: 2px solid rgb(169, 177, 177);
+    border-radius: 5px;
+    background-color: rgb(180, 231, 220);
 }
